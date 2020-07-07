@@ -18,15 +18,15 @@ public class ApiUtil {
     //this class helps interact with the google books api
     //https://www.googleapis.com/books/v1/volumes/?q=android
     //this class will not be instantiated
-    // https://www.googleapis.com/books/v1/volumes?q=cooking&key=AIzaSyCVJQvM-E9kHktDihI8W32i-m7ux1burFg
+  
     private ApiUtil(){}
     //base url
     public static final String BASE_API_URL =
             "https://www.googleapis.com/books/v1/volumes";
     public static final String  QUERY_PARAMETER_KEY = "q";
     public static final String KEY = "key";
-    //API KEY from google  https://console.developers.google.com/apis/credentials?folder=&organizationId=&project=dispatch-235115
-    public static final String API_KEY = "AIzaSyCVJQvM-E9kHktDihI8W32i-m7ux1burFg";
+    
+    public static final String API_KEY = "*******************";
 
     //fields for advanced search --constants to hold the query parameters expected by the api
     public static final String TITLE = "intitle";
