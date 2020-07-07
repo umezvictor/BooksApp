@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="Book"
+            type="com.example.booksapp.Book" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetailActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:textSize="36sp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@{Book.title}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:textSize="24sp"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="52dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@{Book.subTitle}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/bookImageView"
+        android:layout_width="185dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="16dp"
+        android:imageUrl="@{Book.thumbnail}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:textSize="18sp"
+        android:layout_width="101dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="45dp"
+        android:textColor="@color/colorAccent"
+        android:text="@{Book.authors}"
+        app:layout_constraintStart_toEndOf="@+id/bookImageView"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+    <TextView
+        android:id="@+id/tvPublisher"
+        android:textSize="16sp"
+        android:layout_width="101dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="50dp"
+        android:text="@{Book.publishers}"
+        app:layout_constraintStart_toEndOf="@+id/bookImageView"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor" />
+
+    <TextView
+        android:id="@+id/tvPublishedDate"
+        android:textSize="16sp"
+        android:layout_width="106dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:text="@{Book.publishedDate}"
+        app:layout_constraintStart_toEndOf="@+id/bookImageView"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublisher" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="399dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="186dp"
+        android:text="@{Book.description}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
